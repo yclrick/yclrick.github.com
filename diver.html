@@ -11,19 +11,20 @@
         <p>指北针精度：<span id="accuracy">0</span>度</p>  
         <script type="text/javascript">  
 
+//         function orientationHandler(event) {  
+//             document.write("absolute:"+event.absolute+"<br/>");
+// document.write("alpha:"+event.alpha+"<br/>");
+// document.write("beta:"+event.beta+"<br/>");
+// document.write("gamma:"+event.gamma+"<br/>");
+//         }  
         function orientationHandler(event) {  
-            document.write("absolute:"+event.absolute+"<br/>");
-document.write("alpha:"+event.alpha+"<br/>");
-document.write("beta:"+event.beta+"<br/>");
-document.write("gamma:"+event.gamma+"<br/>");
+            document.getElementById("alpha").innerHTML = event.alpha;  
+            document.getElementById("beta").innerHTML = event.beta;  
+            document.getElementById("gamma").innerHTML = event.gamma;  
+            document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
+            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  
+            document.write("aaaaaaa");
         }  
-        // function orientationHandler(event) {  
-        //     document.getElementById("alpha").innerHTML = event.alpha;  
-        //     document.getElementById("beta").innerHTML = event.beta;  
-        //     document.getElementById("gamma").innerHTML = event.gamma;  
-        //     document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
-        //     document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  
-        // }  
           
         if (window.DeviceOrientationEvent) {  
           window.addEventListener("deviceorientation", orientationHandler, false);  
