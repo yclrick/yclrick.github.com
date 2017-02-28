@@ -19,7 +19,7 @@
         }  
           
         if (window.DeviceOrientationEvent) {  
-          window.addEventListener("deviceorientation", orientationHandler, false);  
+          window.addEventListener("deviceorientation", orientationHandler, true);  
         } else {  
           document.body.innerHTML = "What user agent u r using???";  
         }  
