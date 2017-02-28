@@ -10,20 +10,12 @@
         <p>指北针指向：<span id="heading">0</span>度</p>  
         <p>指北针精度：<span id="accuracy">0</span>度</p>  
         <script type="text/javascript">  
-
-//         function orientationHandler(event) {  
-//             document.write("absolute:"+event.absolute+"<br/>");
-// document.write("alpha:"+event.alpha+"<br/>");
-// document.write("beta:"+event.beta+"<br/>");
-// document.write("gamma:"+event.gamma+"<br/>");
-//         }  
         function orientationHandler(event) {  
             document.getElementById("alpha").innerHTML = event.alpha;  
             document.getElementById("beta").innerHTML = event.beta;  
             document.getElementById("gamma").innerHTML = event.gamma;  
             document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
             document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  
-            document.write("aaaaaaa");
         }  
           
         if (window.DeviceOrientationEvent) {  
@@ -31,13 +23,6 @@
         } else {  
           document.body.innerHTML = "What user agent u r using???";  
         }
-
-//         window.addEventListener('deviceorientation', function (e){
-// document.write("absolute:"+e.absolute+"<br/>");
-// document.write("alpha:"+e.alpha+"<br/>");
-// document.write("beta:"+e.beta+"<br/>");
-// document.write("gamma:"+e.gamma+"<br/>");
-// 	},false);  
         </script>  
     </body>  
 </html>  
